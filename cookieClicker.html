@@ -7,3 +7,37 @@
 
 <body style="font-family: Arial, sans-serif; text-align: center; padding-top: 80px; background-color: #fdf6e3;">
 
+  <h1>🍪 Cookie Clicker 🍪</h1>
+
+  <!-- Displays how many times the cookie has been clicked -->
+  <div id="counter" style="font-size: 1.5rem; margin: 20px;">
+    Clicks: 0
+  </div>
+
+  <!-- Button the user clicks -->
+  <button id="cookieBtn" style="font-size: 2rem; padding: 20px 40px; cursor: pointer;">
+    🍪 Click Me!
+  </button>
+
+  <!-- Message area for milestone feedback -->
+  <div id="message" style="margin-top: 30px; font-size: 1.2rem;">
+    Start clicking the cookie!
+  </div>
+
+  <script>
+    // Select DOM elements
+    const button = document.getElementById("cookieBtn");
+    const counterDisplay = document.getElementById("counter");
+    const messageDisplay = document.getElementById("message");
+
+    // Track number of clicks
+    let clicks = 0;
+
+    // Listen for click events on the button
+    button.addEventListener("click", function () {
+
+      // Increase click count
+      clicks++;
+
+      // Update counter display
+      counterDisplay.textContent = "Clicks: " + clicks;
