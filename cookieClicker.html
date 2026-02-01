@@ -41,3 +41,22 @@
 
       // Update counter display
       counterDisplay.textContent = "Clicks: " + clicks;
+  // Show messages at specific milestones
+      if (clicks === 10) {
+        messageDisplay.textContent = "You're just getting started!";
+        document.body.style.backgroundColor = "#e3f2fd";
+      } else if (clicks === 25) {
+        messageDisplay.textContent = "Wow, that’s a lot of cookies 🍪";
+        document.body.style.backgroundColor = "#e8f5e9";
+      } else if (clicks === 50) {
+        messageDisplay.textContent = "Are you still clicking?";
+        document.body.style.backgroundColor = "#fff3e0";
+      } else if (clicks === 100) {
+        messageDisplay.textContent = "🎉 You win! Maybe take a break.";
+        document.body.style.backgroundColor = "#fce4ec";
+      }
+    });
+  </script>
+
+</body>
+</html>
